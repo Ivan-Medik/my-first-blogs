@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>
+      {% block title %}
+        Blog engine
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    <ul class="home_panel">
+      <li class="home_but"><a class="active" href="#home">Home</a></li>
+      <li class="home_but"><a href="#news">News</a></li>
+      <li class="home_but"><a href="#contact">Contact</a></li>
+      <li class="home_but"><a href="#about">About</a></li>
+      <form class="home_form">
+        <input type="text" placeholder="Искать здесь..." name="search_input">
+        <button type="submit" name="search_button"></button>
+      </form>
+    </ul>
+    {% block content %}
+        None
+    {% endblock %}
+  </body>
+</html>
